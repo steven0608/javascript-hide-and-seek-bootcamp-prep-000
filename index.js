@@ -14,3 +14,13 @@ function increaseRankBy(n){
   }
   return rank;
 }
+
+function deepestChild(){
+  var current=document.querySelectorAll("div #grand-node")[0]
+  var next = current.children[0]
+  while (next){
+    current=next;
+    next=current.children[0]
+  }
+  return current;
+}
